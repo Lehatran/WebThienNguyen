@@ -38,32 +38,6 @@ public function login(Request $request)
 }
 
 
-// public function login(Request $request)
-// {
-//     $credentials = $request->only('email', 'password');
-
-//     if ($request->expectsJson() || $request->is('api/*')) {
-//         // // Xử lý đăng nhập cho API, xác thực người dùng
-//         if (!$token = auth('api')->attempt($credentials)) {
-//             return response()->json(['error' => 'Unauthorized', 'credentials' => $credentials], 401);
-//         }
-
-//         // Trả về token cùng với thời gian sống (expiration time)
-//         return response()->json([
-//             'access_token' => $token,
-//             'token_type' => 'bearer',
-//             'expires_in' => auth('api')->factory()->getTTL() * 60 // Giả định TTL được cấu hình là 60 phút
-//         ]);
-//     } else {
-//         // Xử lý đăng nhập cho Web
-//         if (Auth::attempt($credentials)) {
-//             return redirect()->intended('them-san-pham'); // Chuyển hướng đến trang "thêm sản phẩm"
-//         } else {
-//             return redirect()->back()->withErrors(['email' => 'Thông tin đăng nhập không hợp lệ']);
-//         }
-//     }
-// }
-
 public function profile(Request $request)
 {
 
