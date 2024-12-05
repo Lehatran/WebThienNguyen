@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
 
-class PortBasedController
+class PortBasedMiddleware
 {
     /**
      * Handle an incoming request.
@@ -29,8 +29,19 @@ class PortBasedController
                 return $next($request); // Chỉ cho phép Product trên cổng 8001
             }
 
+            if ($port == 8002 && $request->is('api/category/*')) {
+                return $next($request); // Chỉ cho phép Category trên cổng 8002
+            }
+
             if ($port == 8003 && $request->is('api/address/*')) {
-                return $next($request); // Chỉ cho phép Auth trên cổng 8003
+                return $next($request); // Chỉ cho phép Address trên cổng 8003
+            }
+
+            if ($port == 8004 && $request->is('api/admin/*')) {
+                return $next($request); // Chỉ cho phép Auth trên cổng 8004
+            }
+            if ($port == 8005 && $request->is('api/user/*')) {
+                return $next($request); // Chỉ cho phép Auth trên cổng 8005
             }
 
             return response()->json(['error' => 'Invalid port for this route'], 400);

@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Services;
+namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Address;
 
-class AddressService
+class AddressController extends Controller
 {
-    // Lấy tất cả các địa chỉ
-    public function getAllAddresses()
+    public function getListAddress()
     {
-        return Address::all();
+        $address = Address::all();
+        return response()->json($address);
     }
-
-    // Lấy địa chỉ theo ID
+    
     public function getAddressById($id)
     {
         $address = Address::find($id);
