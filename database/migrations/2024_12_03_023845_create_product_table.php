@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('price');
             $table->boolean('status');
+
             $table->integer('id_category');
             $table->date('create_day');
             $table->integer('id_address');
