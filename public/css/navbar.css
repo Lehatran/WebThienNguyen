@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+body {
+    font-size: 16px;
+}
+
+.img_favorite {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.count {
+    position: absolute;
+    top: -23px;
+    left: 17px;
+    border-radius: 50%;
+    background-color: #f9f2d5;
+    width: 20px;
+    height: 20px;
+}
+
+.name_account {
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    /* padding-right: 150px;
+    padding-left: 100px; */
+}
+
+.navbar button:hover {
+    background-color: #df9920;
+}
+
+.navbar img {
+    height: 30px;
+    width: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    width: 200px;
+}
+
+.logo p {
+    margin-left: -50px;
+    font-size: 30px;
+    color: #f29c17;
+}
+
+.post .icon_add {
+    border: 1px solid #fff;
+    padding: 3px;
+    padding-top: 2px;
+    height: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #fff; /* Màu chữ */
+}
+
+.post .text_add {
+    font-size: 16px;
+}
+
+.post button {
+    display: flex;
+    gap: 5px;
+    height: 40px;
+    align-items: center;
+    background-color: #f29c17;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.input_search {
+    display: flex;
+    align-items: center;
+}
+
+.input_search input {
+    position: relative;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 50px;
+    width: 300px;
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.input_search button {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background-color: #f29c17;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 320px;
+}
+
+.input_search button img {
+    width: 25px;
+    height: 25px;
+    padding-top: 3px;
+}
+
+.favorite button:hover,
+.account button:hover {
+    background: none;
+}
+
+.favorite button:hover img,
+.account button:hover img {
+    height: 28px;
+}
+
+.favorite button,
+.account button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.favorite img,
+.account img {
+    height: 24px;
+    margin-right: 5px;
+    transition: height 0.3s ease;
+}
+
+.favorite p,
+.account p {
+    font-size: 16px;
+}
+
+.content {
+    padding-right: 230px;
+    padding-left: 230px;
+}
+
+.content .name_web,
+.content .add_post {
+    margin-top: 20px;
+    display: flex;
+    height: 250px;
+    font-size: 50px;
+    color: grey;
+    background-color: #f1f2f5;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .add_post {
+    position: relative;
+    flex-direction: column;
+    background-color: #f9f2d5;
+    height: 120px;
+    border-radius: 10px;
+    font-size: 26px;
+    color: #000;
+    padding-top: -20px;
+    overflow: hidden;
+}
+
+.content .add_post > p {
+    margin-top: -10px;
+}
+
+.content .add_post .post {
+    margin-top: -10px;
+}
+
+.content .add_post .hoatiet1,
+.content .add_post .hoatiet2 {
+    position: absolute;
+    width: 200px;
+    left: -50px;
+    top: -40px;
+    transform: rotate(17deg);
+}
+
+.content .add_post .hoatiet2 {
+    left: 85.5%;
+    top: 8px;
+    transform: rotate(260deg);
+}
+.account {
+    position: relative;
+    gap: 70px;
+}
+
+.account .button_intro {
+    position: absolute;
+    top: 50px; /* Cách thanh header 50px */
+    left: -200px;
+    box-shadow: 4px 4px 10px 2px #a1a3a4;
+    border-radius: 10px;
+    z-index: 50; /* Đảm bảo không che header */
+    background-color: #fff;
+}
+
+.account .button_intro .intro_inf {
+    width: 300px;
+    height: 175px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(to right, #f8c441, #f1f89e);
+}
+
+.account .intro_inf .text_register {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.account .intro_inf .text_des {
+    width: 170px;
+    margin-top: -10px;
+}
+
+.account .intro_inf img {
+    width: 150px;
+    height: 145px;
+    margin-top: -98px;
+    margin-left: 140px;
+}
+
+.account .intro_inf button {
+    background-color: #f29c17;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+    margin-top: 20px;
+}
+
+.account .intro_inf .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.account .buttons button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: calc(100% - 40px);
+    height: 30px;
+    margin: 10px 20px;
+    border: none;
+    border-bottom: 1px solid rgb(179, 178, 178);
+    background: none;
+}
+
+.account .buttons button p {
+    margin-top: 15px;
+}
+
+.account .buttons .logout {
+    display: flex;
+    background-color: #f29c17;
+    color: #fff;
+    width: 113px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+.hidden {
+    display: none;
+}
+
+.logout p {
+    font-size: 13px;
+}
